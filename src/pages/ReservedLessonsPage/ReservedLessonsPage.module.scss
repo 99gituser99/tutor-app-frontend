@@ -1,0 +1,39 @@
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: start;
+}
+
+.tutors {
+  display: flex;
+  flex-direction: column;
+  width: 66.6666666%;
+  margin-right: 20px;
+}
+
+@media (max-width: 1024px) {
+  .tutors {
+    width: 60%;
+  }
+}
+
+@media (max-width: 840px) {
+  .tutors {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+  .tutors {
+    width: 100%;
+  }
+}

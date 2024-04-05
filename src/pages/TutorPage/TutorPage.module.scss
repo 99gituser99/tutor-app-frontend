@@ -1,0 +1,185 @@
+.wrapper {
+  display: flex;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.left-col {
+  max-width: 66.66666%;
+  width: 100%;
+}
+
+.right-col {
+  max-width: 33.333333%;
+  width: 100%;
+  text-align: center;
+}
+
+.left-col-top {
+  display: flex;
+}
+
+.avatar {
+  min-width: 100px;
+  height: 100px;
+  background-color: var(--primary-400);
+  margin-right: 20px;
+}
+
+.tutor-info {
+  margin-right: 20px;
+}
+
+.tutor-info-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tutor-name {
+  color: black;
+  font-size: 24px;
+  margin: 0;
+}
+
+.add-to-favourite {
+  cursor: pointer;
+
+  &:active {
+    transform: scale(0.8);
+  }
+}
+
+.tutor-info-desc {
+  text-align: justify;
+}
+
+.tutor-actions {
+  text-align: center;
+}
+
+.tutor-action-button {
+  width: 300px;
+}
+
+.lesson-price-title {
+  margin: 10px 0 0;
+  display: block;
+  text-align: center;
+  font-size: 22px;
+}
+
+.lesson-price-desc {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.lesson-rating {
+  display: block;
+  text-align: center;
+}
+
+.lessons-wrapper {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.lessons-details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.lesson-col-left {
+  h4 {
+    margin: 0;
+  }
+  h5 {
+    font-weight: 500;
+    margin: 0;
+  }
+}
+
+.lesson-col-center {
+  text-align: right;
+  flex-grow: 1;
+
+  h4 {
+    font-size: 20px;
+    margin: 0;
+    line-height: 1;
+  }
+  p {
+    margin: 0;
+  }
+}
+
+.lesson-col-right {
+  margin-left: 20px;
+}
+
+.create-lesson-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 300px;
+
+  h6 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+  }
+
+  .input {
+    margin-bottom: 20px;
+  }
+
+  .button {
+    width: 300px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .left-col {
+    max-width: 100%;
+  }
+  .right-col {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .lessons-details {
+    flex-wrap: wrap;
+  }
+  .lesson-col-left {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .left-col-top {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  .lessons-wrapper {
+    flex-wrap: wrap;
+  }
+  .lesson-col-center {
+    text-align: left;
+  }
+  .wrapper {
+    padding: 20px 0;
+  }
+}

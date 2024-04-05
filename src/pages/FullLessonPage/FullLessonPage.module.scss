@@ -1,0 +1,76 @@
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.col + .col {
+  margin-left: 20px;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.user-name {
+  color: black;
+  font-size: 24px;
+  margin: 0;
+}
+
+.lesson-name {
+  margin: 0;
+  font-size: 18px;
+  color: black;
+}
+
+.lesson-theme {
+  margin: 0;
+}
+
+.status-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.status {
+  margin: 0;
+}
+
+.badge {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+
+  &.planned {
+    background-color: var(--primary-400); // Заплановано
+  }
+
+  &.conducted {
+    background-color: var(--green-500); // Проведено
+  }
+}
+
+.date {
+  text-align: right;
+  margin: 0;
+}
+
+.files {
+  display: flex;
+}
+
+.files-title {
+  margin: 0;
+}
+
+.link {
+  margin-top: 15px;
+  display: inline-block;
+}

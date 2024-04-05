@@ -1,0 +1,41 @@
+.messages {
+  padding: 0 10px;
+  height: 100%;
+  max-height: calc(100vh - 370px);
+  min-height: calc(100vh - 370px);
+  overflow-y: auto;
+}
+
+.message-wrapper {
+  display: flex;
+  position: relative;
+
+  &.own-comment {
+    justify-content: end;
+  }
+}
+
+.message {
+  background-color: var(--surface-100);
+  padding: 10px;
+  max-width: 70%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+
+  &.own-comment {
+    text-align: end;
+    background-color: var(--cyan-50);
+  }
+}
+
+.send-at {
+  position: absolute;
+  bottom: 5px;
+  font-size: 12px;
+}
+
+@media (max-width: 640px) {
+  .message {
+    max-width: 100%;
+  }
+}
