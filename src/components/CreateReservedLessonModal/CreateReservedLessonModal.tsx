@@ -54,6 +54,7 @@ const CreateReservedLessonModal: React.FC<ICreateReservedLessonModalProps> = ({
         }
         const { data } = await reservedLessonsAPI.payment(payload)
         if (data.response.checkout_url) {
+          reservedLessonsAPI.create(payload)
           window.open(data.response.checkout_url, "_self")
         } else {
           toast.error("Щось трапилось з платіжним сервісом. Спробуйте будь-ласка пізніше.")
