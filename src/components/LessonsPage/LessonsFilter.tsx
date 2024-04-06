@@ -12,7 +12,6 @@ import styles from "./LessonsPage.module.scss"
 import { useAppDispatch } from "../../redux/store"
 import { AuthType } from "../../redux/auth/authTypes"
 import { LoadingStatusTypes } from "../../redux/appTypes"
-import { clearLesson } from "../../redux/lessons/lessonsSlice"
 import LoadingSpinner from "../ui/LoadingSpinner/LoadingSpinner"
 import { GetResevedLessonsResponceType } from "../../api/apiTypes"
 import { ReservedLessonType } from "../../redux/reservedLessons/reservedLessonsTypes"
@@ -56,7 +55,6 @@ const LessonsFilter: React.FC<ILessonsFilterProps> = ({
 
   const findLessons = async () => {
     if (!auth) return
-    dispatch(clearLesson())
 
     const { student, tutor, ...rest } = filter
 
