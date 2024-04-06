@@ -11,6 +11,7 @@ import styles from './HomePage.module.scss'
 import { useAppDispatch } from '../../redux/store'
 import { LessonsFilterType } from '../../api/apiTypes'
 import { LessonType } from '../../redux/lessons/lessonsType'
+import { clearLesson } from "../../redux/lessons/lessonsSlice"
 import { filterInitialState } from '../../pages/HomePage/HomePage'
 import { lessonsList } from '../ui/AutoCompleteLessons/lessonsList'
 import { getLessons } from '../../redux/lessons/lessonsAsyncActions'
@@ -39,6 +40,7 @@ const TutorFilter: React.FC<ITutorFilterProps> = ({ filter, setFilter, lessons, 
   }
 
   const findLessons = async () => {
+    dispatch(clearLesson())
     const { payload } = await dispatch(getLessons(filter))
     // @ts-ignore
     setTotalLessons(payload.totalCount)
